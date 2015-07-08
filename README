@@ -1,3 +1,16 @@
 # zookeeper-docker
 Docker container for a development environment for Apache Zookeeper
 
+Run the image:
+
+docker run 0xack13/zookeeper:3.4.6
+
+from kazoo.client import KazooClient
+def my_listener(state):
+	if state == KazooState.LOST:
+		print "Lost!"
+	elif state == KazooState.SUSPENDED:
+		print "Suspended!"
+	else:
+		print "Neither.."
+
